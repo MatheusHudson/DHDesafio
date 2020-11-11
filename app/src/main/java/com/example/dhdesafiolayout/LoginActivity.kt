@@ -18,6 +18,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         setSupportActionBar(toolbar)
+        
 
         navController = findNavController(R.id.navHost)
 
