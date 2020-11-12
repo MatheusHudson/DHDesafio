@@ -6,5 +6,6 @@
     <color name="ColorButtonLogin">#FF5252</color>
     <color name="ColorLinha">#1D000000</color>
     <color name="ColorButtonRegistro">#8492A6</color>
+    <color name="Recycler_Background">#DDDDDD</color>
 
 </resources>
