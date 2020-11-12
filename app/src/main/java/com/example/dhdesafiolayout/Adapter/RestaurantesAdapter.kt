@@ -34,8 +34,6 @@ class RestaurantesAdapter(private val listaRestaurantes: MutableList<Restaurante
                 listener.onClickRestaurante(position)
             }
         }
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestauranteViewHolder {
@@ -62,6 +60,4 @@ class RestaurantesAdapter(private val listaRestaurantes: MutableList<Restaurante
     interface OnClickRestauranteListener {
         fun onClickRestaurante(position: Int)
     }
-
-
 }

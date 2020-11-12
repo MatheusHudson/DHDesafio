@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,25 +9,7 @@
     android:orientation="vertical"
     tools:context=".Fragment.RestauranteTelaFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerTelaRestaurante"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:duplicateParentState="true"
-        android:filterTouchesWhenObscured="false"
-        android:fitsSystemWindows="false"
-        android:orientation="vertical"
-        app:flow_wrapMode="aligned"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0"
-        app:reverseLayout="false"
-        tools:listitem="@layout/recycler_restaurantes_tela" />
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -37,17 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/voltar"
-        android:layout_width="50dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/restauranteTitulo"
@@ -70,9 +42,43 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="@string/TitutoPratoSecao"
         android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:text="@string/TitutoPratoSecao" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTelaRestaurante"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:duplicateParentState="true"
+        android:filterTouchesWhenObscured="false"
+        android:fitsSystemWindows="false"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        app:flow_wrapMode="aligned"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        app:reverseLayout="false"
+        tools:listitem="@layout/recycler_restaurantes_tela" />
+
+    <ImageView
+        android:id="@+id/voltar"
+        android:layout_width="39dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,15 +10,16 @@
     <ImageView
         android:id="@+id/pratoImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_height="120dp"
+        android:background="@drawable/border_roundend_top"
+        android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/nomeDoPrato"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textStyle="bold" />
 
 </LinearLayout>

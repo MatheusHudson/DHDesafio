@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dhdesafiolayout.Adapter.RestaurantesAdapter
 import com.example.dhdesafiolayout.Model.Restaurante
@@ -17,7 +18,6 @@ import kotlinx.android.synthetic.main.fragment_home.view.*
 class HomeFragment : Fragment(), RestaurantesAdapter.OnClickRestauranteListener {
     private var listaRestaurante = getAllRestaurantes()
     var adapter = RestaurantesAdapter(listaRestaurante, this)
-
 
 
     override fun onCreateView(
@@ -67,8 +67,15 @@ class HomeFragment : Fragment(), RestaurantesAdapter.OnClickRestauranteListener 
 
     override fun onClickRestaurante(position: Int) {
         var restaurante = listaRestaurante.get(position)
-        adapter.notifyItemChanged(position)
-        Toast.makeText(activity, restaurante.titulo, Toast.LENGTH_SHORT).show()
+
+
+        val bundle = Bundle()
+        bundle.putInt("fotoRestaurante", restaurante.foto)
+        bundle.putString("tituloRestaurante", restaurante.titulo)
+        arguments = bundle
+
+        findNavController().navigate(R.id.action_homeFragment_to_restauranteTelaFragment, bundle)
+
     }
 
 }

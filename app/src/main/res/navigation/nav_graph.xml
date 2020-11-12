@@ -39,11 +39,15 @@
     <fragment
         android:id="@+id/restauranteTelaFragment"
         android:name="com.example.dhdesafiolayout.Fragment.RestauranteTelaFragment"
-        android:label="fragment_restaurante_tela"
-        tools:layout="@layout/fragment_restaurante_tela" >
+        android:label="Restaurante"
+        tools:layout="@layout/fragment_restaurante_tela">
         <action
             android:id="@+id/action_restauranteTelaFragment_to_pratoDetalheFragment"
             app:destination="@id/pratoDetalheFragment" />
+        <action
+            android:id="@+id/action_restauranteTelaFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/pratoDetalheFragment"
