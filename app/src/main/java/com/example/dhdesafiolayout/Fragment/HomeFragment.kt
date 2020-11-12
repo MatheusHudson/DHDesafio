@@ -1,18 +1,16 @@
-package com.example.dhdesafiolayout
+package com.example.dhdesafiolayout.Fragment
 
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dhdesafiolayout.Adapter.RestaurantesAdapter
 import com.example.dhdesafiolayout.Model.Restaurante
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.dhdesafiolayout.R
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 

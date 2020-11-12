@@ -1,4 +1,4 @@
-package com.example.dhdesafiolayout
+package com.example.dhdesafiolayout.Fragment
 
 
 
@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dhdesafiolayout.Adapter.RestaurantesEscolhidoAdapter
 import com.example.dhdesafiolayout.Model.RestauranteTela
+import com.example.dhdesafiolayout.R
 import kotlinx.android.synthetic.main.fragment_restaurante_tela.view.*
 
 
