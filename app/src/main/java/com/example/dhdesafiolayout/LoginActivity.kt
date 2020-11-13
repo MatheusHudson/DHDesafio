@@ -30,6 +30,10 @@ class LoginActivity : AppCompatActivity() {
                 R.id.cadastroFragment -> {
                     toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
                 }
+
+                R.id.homeFragment -> {
+                    toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
+                }
             }
         }
     }
