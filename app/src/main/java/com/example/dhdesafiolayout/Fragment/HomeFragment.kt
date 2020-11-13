@@ -68,14 +68,16 @@ class HomeFragment : Fragment(), RestaurantesAdapter.OnClickRestauranteListener 
     override fun onClickRestaurante(position: Int) {
         var restaurante = listaRestaurante.get(position)
 
+        when (restaurante.titulo) {
+            "Tony Roma's" -> {
+                val bundle = Bundle()
+                bundle.putInt("fotoRestaurante", restaurante.foto)
+                bundle.putString("tituloRestaurante", restaurante.titulo)
+                arguments = bundle
 
-        val bundle = Bundle()
-        bundle.putInt("fotoRestaurante", restaurante.foto)
-        bundle.putString("tituloRestaurante", restaurante.titulo)
-        arguments = bundle
-
-        findNavController().navigate(R.id.action_homeFragment_to_restauranteTelaFragment, bundle)
-
+                findNavController().navigate(R.id.action_homeFragment_to_restauranteTelaFragment, bundle)
+            }
+        }
     }
 
 }
